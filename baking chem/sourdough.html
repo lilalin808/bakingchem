@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/main.js"></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <a href="index.html">
+        <button id="home-button">Home</button>
+      </a>
+    </div>
+    <div id="leavening-agents">
+        <h1>Fermentation: Sourdough</h1>
+        <p>
+          Learn about the science of fermentation by baking your own sourdough bread from scratch!
+        </p>
+      
+        <h2>What is fermentation?</h2>
+        <p>
+          Fermentation is a metabolic process in which microorganisms like yeast and bacteria break down sugars into simpler compounds — most commonly alcohols, gases, and acids — in the absence of oxygen (anaerobic conditions). In sourdough, this natural fermentation gives bread its rise, texture, and complex tangy flavor.
+          <br><br>
+          There are two main types of fermentation involved in sourdough:
+          <br /><strong>1. Alcoholic Fermentation (Yeast-driven):</strong>  
+          Yeast (mostly *Saccharomyces cerevisiae* and wild strains) consume simple sugars and convert them into:
+          <ul>
+            <li>Carbon dioxide (CO₂) — makes the dough rise</li>
+            <li>Ethanol (alcohol) — evaporates during baking</li>
+          </ul>
+          <br />
+          <strong>2. Lactic Acid Fermentation (Bacteria-driven):</strong>  
+          Lactic acid bacteria (like *Lactobacillus*) feed on sugars and produce:
+          <ul>
+            <li>Lactic acid — gives sourdough its signature tang</li>
+            <li>Acetic acid — adds sharpness and complexity</li>
+          </ul>
+      
+          These two organisms live in symbiosis in the sourdough starter — the bacteria create an acidic environment that favors certain wild yeasts and prevents harmful microbes.
+        </p>
+      
+        <h2>What makes sourdough different?</h2>
+        <p>
+          Sourdough fermentation differs from commercial yeast fermentation in several ways:
+          <ul>
+            <li>It uses wild yeast and natural bacteria from flour and the environment</li>
+            <li>Fermentation takes longer (often 12–48 hours)</li>
+            <li>Results in more digestible bread with improved shelf life and flavor complexity</li>
+          </ul>
+          The byproducts of this microbial activity not only affect flavor and rise, but also help break down gluten, phytic acid, and other components in the flour, improving nutrition and digestibility.
+        </p>
+     
+      
+      <div id="background-info">
+        <h2>Sourdough Bread</h2>
+        <p>
+          Sourdough bread is a living product of microbial fermentation. It starts with a starter culture — a mixture of flour and water allowed to ferment over time until it's bubbling and active.
+          <br><br>
+          A sourdough starter contains:
+          <ul>
+            <li>Wild yeast (natural leavening agent)</li>
+            <li>Lactic acid bacteria (flavor and structure)</li>
+            <li>Enzymes (break down starches and proteins)</li>
+          </ul>
+          Once the starter is ready, it's mixed with more flour and water to make dough, which is then fermented over several hours (or days) to develop flavor, gluten strength, and gas bubbles.
+        </p>
+
+        <h2>How to make sourdough bread</h2>
+        <p>
+          <ol type="1">
+            <li><strong>Feed your starter:</strong> Combine equal parts flour and water into your sourdough starter and let it sit until bubbly and active (usually 4–8 hours).</li>
+            <li><strong>Mix the dough:</strong> Combine starter with flour, water, and salt. Mix until a rough dough forms.</li>
+            <li><strong>Bulk fermentation:</strong> Let the dough sit at room temperature for 4–6 hours, stretching and folding every 30 minutes to build gluten.</li>
+            <li><strong>Shape and proof:</strong> Shape the dough and place it in a floured proofing basket. Let it ferment for another few hours or overnight in the fridge.</li>
+            <li><strong>Bake:</strong> Score the dough, then bake it in a preheated Dutch oven at 450°F (230°C) for about 30–45 minutes until crusty and golden.</li>
+          </ol>
+          <img src="images/bread.avif" alt="sourdough baking steps" class="article-image" width="500"/>
+        </p>
+      
+        <h2>Observe the Chemistry</h2>
+        <p>
+          As your dough ferments and bakes, you’ll see the fermentation chemistry in action:
+          <ul>
+            <li>CO₂ from yeast forms air pockets in the dough, giving sourdough its open crumb.</li>
+            <li>Organic acids lower the pH, influencing texture, crust color, and shelf life.</li>
+            <li>The crust undergoes Maillard reactions (thanks to low pH and sugars) and caramelization, giving sourdough its dark, blistered look and rich aroma.</li>
+          </ul>
+          <img src="images/crumb.png" alt="sourdough crumb structure" class="article-image" width="500"/>
+        </p>
+      
+        <h2>Try It Yourself!</h2>
+        <p>
+          Make your own starter using just flour and water:
+          <ol type="1">
+            <li>Day 1: Mix 1/2 cup whole wheat flour + 1/4 cup water. Let sit uncovered for 24 hrs.</li>
+            <li>Day 2–7: Each day, discard half, feed with fresh flour and water. Bubbles and rise = microbial activity!</li>
+            <li>By Day 7, your starter should double in size after feeding and have a tangy aroma — it’s ready to use!</li>
+          </ol>
+          <img src="images/starter.jpg" alt="sourdough microbes" class="article-image" width="500"/>
+        </p>
+      
+        <h2>Fun Experiments</h2>
+        <ul>
+          <li>Compare loaves made with long fermentation vs. short — longer times yield deeper flavor and softer texture.</li>
+          <li>Change your flour types — rye flour often increases microbial activity due to higher nutrient content.</li>
+          <li>Test ambient temperature — fermentation speeds up in warmth and slows in cold.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="quiz">
+      <p>Learn about baking reactions while having fun with this quiz!</p>
+    </div>
+
+    <div id="quiz-container"></div>
+    <div id="feedback-container" style="display: none">
+      <p id="feedback-text"></p>
+    </div>
+    <div id="results" style="display: none">
+      <p>Your score: <span id="score"></span></p>
+      <button id="retry-button">Retry</button>
+    </div>
+
+    <!-- Inside your HTML file -->
+    <script id="quiz-data" type="application/json">
+      [
+        {
+          "question": "What reaction is responsible for browning in baked goods?",
+          "options": ["Maillard Reaction", "Caramelization", "Fermentation"],
+          "correctAnswer": "Maillard Reaction"
+        },
+        {
+          "question": "Which ingredient is responsible for leavening in bread?",
+          "options": ["Baking Soda", "Yeast", "Sugar"],
+          "correctAnswer": "Yeast"
+        },
+        {
+          "question": "What does gluten do in bread dough?",
+          "options": [
+            "Adds sweetness",
+            "Creates elasticity",
+            "Helps with leavening"
+          ],
+          "correctAnswer": "Creates elasticity"
+        }
+      ]
+    </script>
+  </body>
+</html>

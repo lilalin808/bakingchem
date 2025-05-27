@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/main.js"></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <a href="index.html">
+        <button id="home-button">Home</button>
+      </a>
+    </div>
+    <div id="leavening-agents">
+        <h1>Protein Denaturation: Whipped Egg Whites</h1>
+        <p>
+          Learn about protein denaturation by making a light and airy egg-based soufflé!
+        </p>
+      
+        <h2>What is protein denaturation?</h2>
+        <p>
+          Protein denaturation is a process in which proteins lose their structure due to external stress like heat, acid, mechanical force, or salt. This structural change alters the protein’s physical and chemical properties, and but is essential for many cooking techniques, especially when working with eggs.
+          <br /><br />
+          Egg proteins are naturally folded in specific shapes that make them soluble and functional in their raw form. When denatured, these proteins unfold, interact with one another, and form new networks with each other. This is crucial for texture, stability, and volume in cooking.
+          <br><br>
+          Denaturation occurs in three general steps:
+          <br /><strong>Step 1.</strong>
+          The egg proteins begin to unfold from their native structure due to heat or mechanical agitation. Note that this is a physical change, not a chemical one, but it still leads to significant changes in behavior.
+          <br><img src="images/denatured.png" alt="egg protein unfolding" class="article-image" width="600"  />
+          <br /><strong>Step 2.</strong>
+          Once unfolded, the exposed parts of the protein (hydrophobic and hydrophilic regions) begin to interact with other unfolded proteins, forming new bonds.
+          <br /><strong>Step 3.</strong>
+          The new protein network traps air and water, creating a solid or semi-solid structure. This is what gives cooked eggs their firm texture and why beaten egg whites can hold peaks and rise when baked.
+          <br /><ul>
+            <li>Examples: scrambled eggs, custards, meringues, and soufflés</li>
+            <li>Heat and acid (e.g., lemon juice, vinegar) accelerate denaturation</li>
+            <li>Over-denaturation can lead to curdling or weeping in egg-based dishes</li>
+          </ul>
+        </p>
+     
+      
+      <div id="background-info">
+        <h2>Soufflé</h2>
+        <p>
+          A soufflé is a dramatic and delicious way to observe protein denaturation in action. This dish relies heavily on the transformation of egg whites through mechanical denaturation (whipping) and thermal denaturation (baking).
+          <br /><br />
+          A typical soufflé contains:
+          <ul>
+            <li>Egg yolks (for richness and structure)</li>
+            <li>Egg whites (whipped into a foam to provide lift)</li>
+            <li>A base (flavoring like cheese, chocolate, or fruit purée)</li>
+          </ul>
+      
+          When egg whites are beaten, air is trapped within a network of denatured proteins, forming a foam. This foam is stabilized by the protein network — especially albumin — which prevents the air bubbles from popping too quickly.
+          <br /><img src="images/denature.png" alt="protein aggregation" class="article-image" width="600"/>
+          <br />
+          During baking, heat further denatures the proteins, strengthening the foam and helping the soufflé rise. The water in the mixture evaporates into steam, inflating the structure like a balloon.
+        </p>
+
+        <h2>How to make a soufflé</h2>
+        <p>
+          <ol type="1">
+            <li>Separate egg whites and yolks carefully — even a little yolk in the whites can prevent proper foaming.</li>
+            <li>Whip egg whites with a pinch of cream of tartar (an acid that stabilizes the foam) until they reach stiff peaks.</li>
+            <li>Prepare your flavor base (e.g., cheese roux, melted chocolate) and mix with the yolks.</li>
+            <li>Gently fold the whites into the base — this step is critical to avoid deflating the foam.</li>
+            <li>Transfer the mixture into greased ramekins and bake in a preheated oven. Do not open the oven door early!</li>
+          </ol>
+        </p>
+      
+        <h2>Observe the Chemistry</h2>
+        <p>
+          As the soufflé bakes, you can visually observe the protein network at work — the dish puffs up dramatically as water turns to steam and is trapped by the egg protein matrix. When done right, the inside is creamy and light, while the top forms a gently browned cap. 
+          <br /><br />
+         <img src="images/souffle.jpg" alt="protein aggregation" class="article-image" width="600"/>
+          <br>
+          Try making a chocolate soufflé to taste the difference — you’ll notice that the texture is airy, almost mousse-like, yet it holds its shape. This transformation is all thanks to protein denaturation!
+        </p>
+      
+        <h2>Tips and Fun Experiments</h2>
+        <ul>
+          <li>Compare soufflés made with room-temperature vs. cold egg whites — warmer whites whip faster due to slightly weakened protein bonds.</li>
+          <li>Try folding the whites more or less vigorously and observe how it impacts the rise — aggressive folding can collapse the foam!</li>
+          <li>Add a bit of lemon juice to your whites before whipping and compare stability to plain whites.</li>
+        </ul>
+      </div>
+    </div>
+      
+
+    <div id="quiz-container"></div>
+    <div id="feedback-container" style="display: none">
+      <p id="feedback-text"></p>
+    </div>
+    <div id="results" style="display: none">
+      <p>Your score: <span id="score"></span></p>
+      <button id="retry-button">Retry</button>
+    </div>
+
+    <!-- Inside your HTML file -->
+    <script id="quiz-data" type="application/json">
+        [
+        {
+          "question": "What role do fats play in the texture of baked goods?",
+          "options": ["Create a crumbly texture", "Increase elasticity", "Aid in rising"],
+          "correctAnswer": "Create a crumbly texture"
+        },
+        {
+          "question": "Which fat is commonly used in pie crusts for flakiness?",
+          "options": ["Butter", "Olive Oil", "Coconut Oil"],
+          "correctAnswer": "Butter"
+        },
+        {
+          "question": "What happens when fats are overmixed into cake batter?",
+          "options": ["The cake becomes dense", "The cake becomes airy", "The cake rises higher"],
+          "correctAnswer": "The cake becomes dense"
+        },
+        {
+          "question": "How do fats affect the Maillard reaction in baking?",
+          "options": ["They prevent browning", "They accelerate browning", "They have no effect on browning"],
+          "correctAnswer": "They accelerate browning"
+        },
+        {
+          "question": "Which of the following is the best fat for making a light, fluffy cake?",
+          "options": ["Butter", "Shortening", "Lard"],
+          "correctAnswer": "Butter"
+        }
+      ]
+      
+    </script>
+  </body>
+</html>
