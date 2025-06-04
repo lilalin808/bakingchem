@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  list-style-type: disc; /* change to decimal for <ol> if needed */
+  margin-left: 1.5rem;
+  padding-left: 1.5rem; /* Add this */
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+/* Body and General Layout */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+main nav input {
+  padding: 20px;
+  font-size: 3px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  min-width: 55%;
+}
+
+main nav select {
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  min-width: 15%;
+}
+
+/* Main Section */
+main {
+  flex-grow: 1;
+  padding: 25px;
+}
+
+/* Articles Section */
+
+.article img.article-image {
+  aspect-ratio: 7 / 4; /* keeps 3:2 ratio */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Individual Article */
+
+.article h2 {
+  font-size: 1.25rem;
+  color: #000000;
+  margin: 5px;
+}
+
+.article .summary {
+  font-size: 1rem;
+  color: #000000;
+  margin: 15px;
+}
+
+.article .level {
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.articles {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  align-items: center;
+  gap: 20px; /* Add space between grid items */
+}
+
+.articles {
+  align-items: stretch; /* ensures .article fills grid row */
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.article img.article-image {
+  order: 0; /* explicitly puts the image first, though default */
+  flex-shrink: 0; /* prevent shrinking */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 7 / 4;
+  object-fit: cover;
+  margin: 0;
+  padding-bottom: 20px;
+  display: block;
+}
+
+/* Read More Button */
+.article-button {
+  padding-bottom: 20px;
+  justify-content: flex-start; /* aligns content to bottom */
+
+  width: 100%; /* Make it fill the container */
+  height: 100%;
+
+  overflow: hidden; /* Ensure that content inside doesn't overflow */
+  background-color: #f8f2e9; /* White background for articles */
+  border: none;
+}
+
+.article-button:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#leavening-agents {
+  margin: 20px;
+}
+/* Footer */
+footer {
+  background-color: #f8f2e9;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center; /* centers child elements in column direction */
+    text-align: center; /* aligns text inside those elements */
+  }
+
+  header nav {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The side navigation menu */
+.sidebar {
+  background-color: #f8f2e9;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 10px;
+  border-color: #f8f2e9;
+  padding-left: 15px;
+}
+
+/* Sidebar links */
+.sidebar a,
+.search {
+  font-size: large;
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  color: #000000;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover {
+  color: rgb(222, 153, 14);
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+/* Default layout: side by side for screens wider than 400px */
+nav {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  width: auto;
+}
+
+/* General screen styles */
+@media screen {
+  .sidebar,
+  main nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a,
+  .search {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/* Stack search bar and dropdown vertically on screens ≤ 400px */
+@media screen and (max-width: 300px) {
+  .sidebar a,
+  .search {
+    text-align: center;
+    float: none;
+  }
+}

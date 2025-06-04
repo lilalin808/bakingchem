@@ -1,0 +1,230 @@
+/* General Reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#title-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+img,
+video {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+  margin: top 15px;
+}
+im h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin: 15px;
+}
+#recipe {
+  background-color: #f8f2e9;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+ul,
+ol {
+  list-style-position: outside;
+  list-style-type: disc; /* change to decimal for <ol> if needed */
+  margin-left: 1.5rem;
+  padding-left: 1.5rem; /* Add this */
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+/* Body and General Layout */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Main Section */
+main {
+  flex-grow: 1;
+  padding: 25px;
+}
+
+/* Articles Section */
+
+/* Footer */
+footer {
+  background-color: #f8f2e9;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The side navigation menu */
+.sidebar {
+  background-color: #f8f2e9;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 10px;
+  border-color: #f8f2e9;
+}
+
+/* Sidebar links */
+.sidebar a,
+.search {
+  font-size: large;
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  color: #000000;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover {
+  color: rgb(222, 153, 14);
+}
+
+/* General screen styles */
+@media screen {
+  .sidebar,
+  main nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a,
+  .search {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/* Stack search bar and dropdown vertically on screens ≤ 400px */
+
+#quiz-container {
+  max-width: 700px;
+  margin: auto;
+  background: #f8f2e9;
+  padding: 25px;
+}
+
+.question-block {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.question-block h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.answer-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  margin: 6px 0;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-option:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.answer-option:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedback {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#results {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #f8f2e9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #f8f2e9;
+  text-align: center;
+  font-size: 20px;
+  display: none;
+}
+
+#retry-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+#retry-button:hover {
+  background-color: #0073a1;
+}

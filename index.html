@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baking Chemistry Educational Site</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Baking Chemistry</h1>
+      </div>
+    </header>
+
+    <main>
+      <!-- The sidebar -->
+      <div class="sidebar">
+        <a class="active" href="index.html">Home</a>
+        <a href="">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+      <nav>
+        <input
+          type="text"
+          id="search-bar"
+          class="search"
+          placeholder="Search for articles..."
+        />
+        <select id="level-filter" class="search">
+          <option value="all">All Levels</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </nav>
+      <section class="articles">
+        <!-- First Article -->
+
+        <a href="maillard.html">
+          <div class="article" data-level="advanced">
+            <button class="article-button">
+              <img
+                src="images/brownbutter.jpg"
+                alt="baking"
+                class="article-image"
+              />
+              <h2>Maillard Reaction: Brown Butter</h2>
+              <p class="summary">
+                Learn about the mailliard reaction by making brown butter
+                chocolate chip cookies.
+              </p>
+
+              <p class="level">Level: Advanced</p>
+            </button>
+          </div>
+        </a>
+
+        <a href="denature.html">
+          <div class="article" data-level="advanced">
+            <button class="article-button">
+              <img
+                src="images/whipped.jpg"
+                alt="baking"
+                class="article-image"
+              />
+              <h2>Protein Denaturation: Egg Whites</h2>
+              <p class="summary">
+                Learn about protein denaturation by making a light and airy
+                egg-based soufflé!
+              </p>
+
+              <p class="level">Level: Advanced</p>
+            </button>
+          </div>
+        </a>
+
+        <a href="sourdough.html">
+          <div class="article" data-level="beginner">
+            <button class="article-button">
+              <img
+                src="images/sourdough.jpg"
+                alt="baking"
+                class="article-image"
+              />
+              <h2>Fermentation: Sourdough</h2>
+              <p class="summary">
+                Learn about the science of fermentation by baking your own
+                sourdough bread from scratch!
+              </p>
+
+              <p class="level">Level: Beginner</p>
+            </button>
+          </div>
+        </a>
+        <!-- Second Article -->
+        <a href="leavening.html">
+          <div class="article" data-level="beginner">
+            <button class="article-button">
+              <img src="images/soda.jpg" alt="baking" class="article-image" />
+
+              <h2>Leavening Agents: Baking Soda</h2>
+              <p class="summary">
+                learn about the chemical leavening of baking soda by making
+                coffe crunch cake!
+              </p>
+              <p class="level">Level: Beginner</p>
+            </button>
+          </div>
+        </a>
+
+        <!-- Third Article -->
+        <a href="powder.html">
+          <div class="article" data-level="intermediate">
+            <button class="article-button">
+              <img src="images/powder.jpg" alt="baking" class="article-image" />
+
+              <h2>Leavening Agents: Baking Powder</h2>
+              <p class="summary">
+                learn about the chemical leavening of baking powder by making
+                buttermilk pancakes!
+              </p>
+              <p class="level">Level: Intermediate</p>
+            </button>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; By Lila Lin.</p>
+    </footer>
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

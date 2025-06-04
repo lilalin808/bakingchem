@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles/article.css" />
+    <script src="scripts/main.js"></script>
+  </head>
+  <header>
+    <div class="logo">
+      <h1>Baking Chemistry</h1>
+    </div>
+  </header>
+
+  <main>
+    <!-- The sidebar -->
+    <div class="sidebar">
+      <a class="active" href="index.html">Home</a>
+      <a href="">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <div id="leavening-agents">
+      <h1>Maillard reaction: brown butter</h1>
+      <p>
+        Learn about the maillard reaction by making brown butter chocoalte chip
+        cookies!
+      </p>
+      <h2>What is the maillard reaction?</h2>
+      <p>
+        The Maillard reaction is a series of non-enzymatic browning reactions
+        between amino acids and reducing sugars. The reaction typically occurs
+        under low moisture conditions at temperatures above 284°F(140°C), and is
+        what gives browned foods their distinctive nutty flavor and dark color. 
+        Higher pH increases rate of Maillard reaction, adding a small amount of baking soda can enhance and speed up the reaction.          
+        the chemistry can be broken down into three main steps:
+        <br /><strong>Step 1.</strong>
+      
+        Through a condensation reaction, the carbonyl group of the sugar joins
+        with amino group of the amino acid to form N-substituted
+        glycosylamine(Schiff Base).
+    <br>
+      <img src="images/condensation.webp" alt="baking" class="article-image" />
+      <br>
+        <strong>Step 2.</strong>
+        The unstable glycosylamine undergoes Amadori rearrangement into a stable
+        ketoamine known as an Amadori compound (for aldoses) or Heyns compound
+        (for ketoses). 
+        <br>
+        <img src="images/amadori.webp"alt="baking" class="article-image"/>
+    <br>
+      <strong>Step 3.</strong> The amadori compound leads to multiple degradation pathways where it reacts to form several products such as:
+      <ul>
+<li>Reductones and water molecules</li>
+<li>Diacetyl, pyruvaldehyde, aspirin, and other dhort-chain hydrolytic fission products</li>
+<li>Melanoidins and brown nitrogenous polymers</li>
+      </ul> 
+The wide variety of degradation pathways is what causes each food to have a unique flavor and aroma after undergoing the maillard reaction.
+      The most notable product of the maillard reaction is melanoidins, which are brown, high molecular weight polymers formed during the Maillard reaction. They are responsible for the characteristic brown color and nutty/toasted flavor of many foods like bread, steak, and cookies. 
+          Additionally, a variety of compounds contirbute to the enhanced aromas produced by the reaction. these aromatic compounds are include ketones, aldehydes, alcohols, furans, and their derivatives such as pyrrole, pyridine, pyrazine, thiophene, and sulfides. 
+ </p>
+    
+
+      <h2>Brown Butter</h2>
+      <p>Brown butter (or beurre noisette in French) is an example of the Maillard reaction, but it’s also influenced by a bit of caramelization and thermal degradation of milk solids.
+        Brown butter is made by gently heating butter, which contains:
+        <ul>
+<li>~80% milk fat (triglycerides)</li>
+<li>~15–17% water</li>
+<li>~1–2% milk solids (proteins, sugars, salts)</li>
+        </ul>
+
+As butter is heated, water evaporates, and lactose(reducing sugar) and free amino acids and peptides (from milk proteins) react to form melanoidins and aromatic compounds.
+ While some caramelization occurs in the lactose, the browning of butter is mainly attributed to the lactose and milk proteins undergoing the Maillard reaction. 
+      </p>
+
+      <h2>How to make brown butter</h2>
+      <p>
+<ol type="1">
+<li>--Heat butter in pot on low to medium heat. After a few minutes, water will evaporate off the milk proteins which will start to brown.</li>
+
+<li>--Scrape the bottom of the pan to prevent the browning milk proteins from sticking. </li>
+
+
+<li>--When desired color is achieved pour the butter mixture into a heatproof bowl and stir it for one or two minutes to cool it down. Do not leave the butter in the pan since it will continue to cook and burn.</li>
+
+</ol >
+<h2>Brown butter chocolate chip cookies</h2>   
+You can see, taste, and smell the effects of the maillard reaction on butter by making brown butter chocolate chip cookies!
+Using the steps above, make some brown butter and substitute it into your favorite cookie recipe. For every 1/2 cup (8 tablespoons) of regular butter, add 1 tablespoon of liquid (like water, milk, or another liquid from the recipe) when using brown butter to make up for the water that evaporated. 
+<br>
+add some images from experiment
+<br>
+if you compare normal cookies with brown butter cookies, the brown butter ones will be noticably darker, richer, and nuttier. the enhanced flavor of brown butter makes it a desirbale ingredient in many foods beyond just cookies. It can be used in savory foods such as  vegetables, pasta, fish, and chicken. Brown butter is also a critical component in pastries and other baked goods such as tart tatin, brownies, cakes, and pancakes. 
+ </p>
+</div>
+    <div id="quiz">
+      <h2>Quiz!</h2>
+    </div>
+
+    <div id="quiz-container"></div>
+    <div id="feedback-container" style="display: none">
+      <p id="feedback-text"></p>
+    </div>
+    <div id="results" style="display: none">
+      <p>Your score: <span id="score"></span></p>
+      <button id="retry-button">Retry</button>
+    </div>
+
+    <!-- Inside your HTML file -->
+    <script id="quiz-data" type="application/json">
+      [
+        {
+          "question": "What reaction is responsible for browning in baked goods?",
+          "options": ["Maillard Reaction", "Caramelization", "Fermentation"],
+          "correctAnswer": "Maillard Reaction"
+        },
+        {
+          "question": "Which ingredient is responsible for leavening in bread?",
+          "options": ["Baking Soda", "Yeast", "Sugar"],
+          "correctAnswer": "Yeast"
+        },
+        {
+          "question": "What does gluten do in bread dough?",
+          "options": [
+            "Adds sweetness",
+            "Creates elasticity",
+            "Helps with leavening"
+          ],
+          "correctAnswer": "Creates elasticity"
+        }
+      ]
+    </script>
+  </body>
+  <footer>
+    <p>&copy; By Lila Lin.</p>
+  </footer>
+
+</html>

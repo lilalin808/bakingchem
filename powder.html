@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/main.js"></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <a href="index.html">
+        <button id="home-button">Home</button>
+      </a>
+    </div>
+    <div id="leavening-agents">
+      <h1>Chemistry of Baking Powder</h1>
+
+      <h2>What is Baking Powder?</h2>
+      <p>
+        Baking powder is a chemical leavening agent that contains both an acid
+        and a base. It is used to create a light and fluffy texture in baked
+        goods by producing carbon dioxide gas (CO₂) during mixing and baking.
+      </p>
+
+      <h2>What’s in Baking Powder?</h2>
+      <ul>
+        <li><strong>Baking soda (NaHCO₃):</strong> The base.</li>
+        <li>
+          <strong>Dry acid:</strong> Such as monocalcium phosphate or sodium
+          aluminum sulfate.
+        </li>
+        <li>
+          <strong>Filler:</strong> Typically cornstarch, to absorb moisture and
+          prevent premature reactions.
+        </li>
+      </ul>
+
+      <h2>Chemical Reactions</h2>
+      <p>
+        When baking powder is mixed with liquid, an acid-base reaction takes
+        place:
+      </p>
+      <p><code>NaHCO₃ + H⁺ → Na⁺ + CO₂↑ + H₂O</code></p>
+      <p>
+        The CO₂ gas creates bubbles that get trapped in the batter, causing it
+        to expand and rise.
+      </p>
+
+      <h2>Single-Acting vs. Double-Acting</h2>
+      <ul>
+        <li>
+          <strong>Single-acting:</strong> Reacts fully when mixed with liquid.
+        </li>
+        <li>
+          <strong>Double-acting:</strong> Reacts in two phases — once when
+          moistened, and again when heated in the oven or pan. This gives more
+          consistent rise and is more commonly used.
+        </li>
+      </ul>
+
+      <h2>Why Use Baking Powder Instead of Baking Soda?</h2>
+      <p>
+        Baking soda requires an external acid to react. Baking powder already
+        contains the acid, making it more convenient in recipes that don't have
+        enough natural acidity.
+      </p>
+
+      <div class="recipe">
+        <h3>Example: Classic Chocolate Cake</h3>
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>1¾ cups all-purpose flour</li>
+          <li>¾ cup unsweetened cocoa powder (non-alkalized)</li>
+          <li>1½ tsp baking powder</li>
+          <li>1½ tsp baking soda</li>
+          <li>2 cups sugar</li>
+          <li>2 eggs</li>
+          <li>1 cup milk</li>
+          <li>½ cup vegetable oil</li>
+          <li>1 cup boiling water</li>
+          <li>1 tsp vanilla extract</li>
+          <li>½ tsp salt</li>
+        </ul>
+
+        <p>
+          <strong>Explanation:</strong> This recipe uses both baking powder and
+          baking soda. The cocoa powder (if natural and not Dutch-processed) and
+          milk provide mild acidity to activate the baking soda, while the
+          baking powder ensures a second rise as the cake bakes.
+        </p>
+
+        <p><strong>Chemical Reactions:</strong></p>
+        <p>
+          Initial reaction with acidic ingredients:
+          <br /><code>NaHCO₃ + H⁺ (from cocoa/milk) → CO₂↑ + H₂O + salt</code>
+        </p>
+        <p>
+          Additional reaction during heating (double-acting powder):
+          <br /><code>NaHCO₃ + heat → Na₂CO₃ + CO₂↑ + H₂O</code>
+        </p>
+        <p>
+          This combination results in a soft, moist cake with excellent volume.
+        </p>
+      </div>
+    </div>
+
+    <div id="quiz-container"></div>
+    <div id="feedback-container" style="display: none">
+      <p id="feedback-text"></p>
+    </div>
+    <div id="results" style="display: none">
+      <p>Your score: <span id="score"></span></p>
+      <button id="retry-button">Retry</button>
+    </div>
+
+    <!-- Inside your HTML file -->
+    <script id="quiz-data" type="application/json">
+      [
+        {
+          "question": "What role do fats play in the texture of baked goods?",
+          "options": [
+            "Create a crumbly texture",
+            "Increase elasticity",
+            "Aid in rising"
+          ],
+          "correctAnswer": "Create a crumbly texture"
+        },
+        {
+          "question": "Which fat is commonly used in pie crusts for flakiness?",
+          "options": ["Butter", "Olive Oil", "Coconut Oil"],
+          "correctAnswer": "Butter"
+        },
+        {
+          "question": "What happens when fats are overmixed into cake batter?",
+          "options": [
+            "The cake becomes dense",
+            "The cake becomes airy",
+            "The cake rises higher"
+          ],
+          "correctAnswer": "The cake becomes dense"
+        },
+        {
+          "question": "How do fats affect the Maillard reaction in baking?",
+          "options": [
+            "They prevent browning",
+            "They accelerate browning",
+            "They have no effect on browning"
+          ],
+          "correctAnswer": "They accelerate browning"
+        },
+        {
+          "question": "Which of the following is the best fat for making a light, fluffy cake?",
+          "options": ["Butter", "Shortening", "Lard"],
+          "correctAnswer": "Butter"
+        }
+      ]
+    </script>
+  </body>
+</html>
