@@ -1,8 +1,7 @@
 /* General Reset */
 * {
   margin: 0px;
-  padding-left: 5%;
-  padding-right: 5%;
+  
 
   box-sizing: border-box;
   font-family: "Courier New", Courier, monospace;
@@ -51,6 +50,8 @@ ol {
 
 /* Body and General Layout */
 body {
+  padding-left: 5%;
+  padding-right: 5%;
   font-family: "Arial", sans-serif;
   background-color: #ffffff;
   color: #333;
